@@ -1,0 +1,262 @@
+@media all and (max-width: 768px){
+  body{
+    font-family: Poppins-Regular;
+    width: 100%;
+    max-height: 640px;
+  }
+  .app{
+    font-family: Poppins-Regular;
+    width: 100%;
+    max-height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25rem;
+  }
+  .upper-row{
+    width: 85%;
+    height: 83%;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+  }
+  .lower-row{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .header{
+    margin-top: 60px;
+  }
+  .link-input{
+    font-size: 15px;
+    color: #645f5f;
+    padding: 10px 10px 10px 40px;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-top: 60px;
+    box-sizing: border-box;
+  }
+  .link-input:focus{
+    color: #645f5f;
+    font-size: 15px;
+  }
+  .link-input::placeholder{
+    
+    font-size: 15px;
+    color: #645f5f;
+  }
+  .action{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .action button{
+    margin-right: 20px;
+  }
+  .link-icon{
+    position: absolute;
+    left: 40px; /* Adjust based on your design */
+    transform: translateY(75px);
+    font-size: 20px;
+    color: #888;
+  }
+  .modal-cont{
+    position: fixed;
+    bottom: 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #645f5f00;
+    backdrop-filter: blur(3px);
+  }
+  .modal{
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+   bottom: -100%;
+   background: black;
+   width: 98%;
+   height: 70%;
+   border-radius: 50px;
+   transition: bottom 2.5s ease-in-out;
+   z-index: 1000;
+  
+    
+  }
+  .modal.show{
+    bottom: 0;
+  }
+  .modal-container{
+    width: 95%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .modal-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 95%;
+    height: 20%;
+    gap: 10px;
+    
+  }
+  .modal-btn{
+   
+    height: 40px;
+    border-radius: 50px;
+  }
+  .cancel{
+    width: 110px;
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .download{
+    width: 100px;
+    border: 1px solid red;
+    background: red;
+    color: white;
+  }
+  hr{
+    width: 10%;
+    height: 4px;
+    background: white;
+    border-radius: 50px;
+  }
+  .video-container{
+    margin-top: 15px;
+    width: 95%;
+    height: 90px;
+    background: red;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  .video-logo{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .play-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    background: #fff;
+    border-radius: 15px;
+  }
+  .video-detail{
+    width: 70%;
+    height: 100%;
+   padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+   
+  }
+  .video-detail ul{
+    width: 90%;
+    margin-top: -20px;
+    margin-left: -38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .video-detail ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .configure-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .configure-container h4{
+    color: #fff;
+    font-weight: 200;
+  }
+  .format-selection{
+    display: flex;
+    flex-direction: row;
+  }
+  .audio{
+    width: 80px;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid red;
+  }
+  .video{
+    border: 1px solid red;
+    width: 80px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: transparent;
+    color: #fff;
+  }
+  .format-preference{
+    width: 95%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .format-preference p{
+    font-size: 15px;
+  }
+  .pref{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    width: 55%;
+  }
+  .pref button{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: #fff;
+    width: 70px;
+    height: 40px;
+    box-shadow: #fff 0 0 -10px 30px ;
+  }
+ 
+}

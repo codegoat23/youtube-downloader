@@ -8,27 +8,42 @@ import {FaBalanceScaleRight} from '@react-icons/all-files/fa/FaBalanceScaleRight
 import { FaRuler} from '@react-icons/all-files/fa/FaRuler'
 import {FaHdd} from '@react-icons/all-files/fa/FaHdd'
 import {FaFile } from '@react-icons/all-files/fa/FaFile'
+
+
+
 function Modal(props) {
+
+  function formatVideoDuration(seconds) {
+    const hours = Math.floor(seconds / 3600); // Get hours
+    const minutes = Math.floor((seconds % 3600) / 60); // Get minutes
+    const secs = seconds % 60; // Get seconds
+  
+    // Format to ensure two digits for minutes and seconds
+    return `${hours > 0 ? hours + ':' : ''}${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  }
+  
+  // Example usage with a video duration of 5000 seconds
+  const videoDuration = props.videoInfo.lengthSeconds;
+  console.log(formatVideoDuration(videoDuration)); // Output: "1:23:20"
+
   return (
     <div className='modal-cont'>
-         <div className={`modal${props.isVisible ? "show" : ""}`}>
+         <div className={`modal ${props.isVisible ? "show" : ""}`}>
          <hr/>
           <div className='modal-container'>
            <div className='video-container'>
             <div className='video-logo'>
-              <div className='play-logo'>
-                <FaPlay size={20}/>
-              </div>
+             <img src={props.videoInfo.thumbnail} className="play-logo"/>
             </div>
             <div className='video-detail'>
-              <h3>Video Title</h3>
+              <h3>{props.videoInfo.title}</h3>
               <ul>
                 <li>
                   <FaVideo/>
                   720p</li>
                 <li>
                   <FaRuler />
-                  05:32</li>
+                  {formatVideoDuration(videoDuration)}</li>
               </ul>
             </div>
            </div>
